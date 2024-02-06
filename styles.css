@@ -2,6 +2,7 @@
     --text-clr: #0b0f0f;
     --btn-clr: #284229;
     --alt-text-clr: #889989;
+    font-family: 'Cabin', monospace;
 }
 
 body {
@@ -17,27 +18,33 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    width: max(30vw, 400px);
-    border: 1px solid red;
+    width: max(40vw, 400px);
     min-height: 100%;
     background-image: url(./img/DSC03100.jpg);
     background-repeat: none;
     background-position: center;
     background-size: cover;
+    z-index: 3;
 }
 
 .sidebar > footer {
-
+    color: rgb(255, 255, 255);
+    background-color: hsla(180, 15%, 5%, 55%);
+    font-size: 20px;
 }
 
 div.form-page {
+    padding-left: 2%;
     display: flex;
     height: 100vh;
-    width: 70vw;
+    width: 60vw;
+    background-color: #f7f7f8;
 }
 
 div.form-block {
+
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -54,27 +61,81 @@ h2.info, div.submits {
 h2.info {
     margin: 0;
     max-width: 640px;
+    font-size: max(2.4vmin, .1vmin);
+    margin-bottom: 30px;
 }
 
 form {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 102%;
-    margin-left: -1%;
+
+    width: 105%;
+    margin-left: -4%;
+    
+    
 }
 
+fieldset {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgb(194, 195, 199)
+}
 div.submits {
     display: flex;
     flex-direction: column;
     gap: 4%
 }
 
+.submits span {
+    font-size: 14pt;
+}
+
+.submits a {
+    margin-left: 14px;
+    color: #528a54;
+}
+.submits button {
+    margin-top: -1%;
+    background-color: #557056;
+    height: 50px;
+    width: 220px;
+    font-family: 'Cabin', monospace;
+    color: ivory;
+    box-shadow: 2px 2px 2px darkgrey;
+    font-size: 14pt;
+    border: 1pt solid rgb(161, 161, 161);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 ul {
     list-style: none;
     columns: 2;
-    max-width: 400px;
+    max-width: 460px;
+    margin-left: -36px;
+}
+
+fieldset > h3 {
+    margin-left: 16px;
+    font-size: 18pt;
+    margin-bottom: -10px
 }
 
 li {
+    font-size: 10pt;
+    letter-spacing: 2pt;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
     padding: 14px
+}
+li > label {
+    margin-bottom: 50px;
+}
+li input {
+    border: 1px solid rgb(191, 201, 211);
+    border-radius: 4px;
+    height: 20px;
+    width: 210px;
+}
+li input:focus {
+    border-color: blue;
+    outline: blue;
+    box-shadow: 2px 2px 2px lightgray;
 }
